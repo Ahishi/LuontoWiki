@@ -1,0 +1,181 @@
+
+/*--------- BACKGROUND ---------------------*/
+
+html {
+	background: var(--primary);
+	background: linear-gradient(144deg, rgba(0,204,170,1) 0%, rgba(7,186,126,1) 94%);
+}
+
+/*Background of all the app view */
+#container {
+	background: var(--default);
+	font-family: 'Roboto', sans-serif;
+	color: var(--font-default);
+	border-style: none;
+	padding-bottom: 1.5rem;
+	max-width: 70%;
+	margin: 0 auto;
+	border-radius: 5px;
+
+	box-shadow:
+			0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+			0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+			0 12.5px 10px rgba(0, 0, 0, 0.06),
+			0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+			0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+			0 100px 80px rgba(0, 0, 0, 0.12)
+
+}
+
+/*--------- HEADER ---------------------*/
+
+/*Header text on top of the menu*/
+header h1 {
+	background-color: var(--secondary-dark);
+	color: var(--font-light);
+	border-radius: 5px 5px 0 0;
+	margin: 0;
+	padding: 2rem 0;
+	font-size: 1.5rem;
+	font-family: inherit;
+	text-align: center;
+}
+
+/*--------- MAIN MENU ---------------------*/
+
+/*Navbar*/
+#navbar {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	background: var(--secondary);
+	box-shadow: 0 4px 3px -2px rgba(0,0,0,.2);
+}
+
+/*Menu item*/
+#navbar li {
+	display: block;
+	width: auto;
+	height: fit-content;
+}
+
+/*Link in menu item*/
+#navbar a {
+	color: var(--font-light);
+	display: block;
+	padding: 1.5rem 1.5rem;
+	text-decoration: none;
+}
+
+/*Menu item when mouse over*/
+#navbar a:hover {
+	color: var(--font-light-focused);
+}
+
+/*--------- ARTICLES ---------------------*/
+
+/*Frame of each "article"*/
+article {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.2);
+	margin: 3rem 3rem 0 3rem;
+	overflow: hidden;
+	border-radius: 5px;
+	max-width: 1000px;
+}
+
+/*article title*/
+article h2 {
+	margin: 1.5rem;
+	font-size: 1.2rem;
+	font-family: inherit;
+	max-width: 1000px;
+}
+
+/*article text*/
+article p {
+	margin: 1.5rem;
+	font-family: inherit;
+	line-height: 1.35;
+}
+
+
+/* "Images" */
+.image {
+	width: 100%;
+	margin-bottom: -4px;
+	border-radius: 5px 5px 0 0;
+
+}
+
+/*Button in end of each article*/
+.button {
+	display: block;
+	border-radius: 5px;
+	background-color: var(--secondary);
+	color: var(--font-light);
+	width: 3rem;
+	padding: .6rem 1.3rem;
+	margin: 0;
+	text-decoration: none;
+	font-family: inherit;
+
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/*Button when mouse over*/
+.button:hover {
+	color: var(--font-light-focused);
+	background-color: var(--secondary-light);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@media only screen and (max-width: 700px) {
+	#navbar {
+		justify-content: space-between;
+		padding: 0 .5rem;
+	}
+
+	#navbar a {
+		padding: 1rem;
+	}
+
+	#container {
+		max-width: none;
+	}
+
+	article {
+		margin: 1.5rem 1.5rem 0 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+
+	#navbar {
+		height: 51px;
+	}
+
+	#navbar a {
+		display: none;
+	}
+
+}
+
+:root {
+	--secondary-light: #07ba7e;
+	--secondary: #009263; /*Blue-Green*/
+	--secondary-dark: #097351;
+
+	--primary: #00CCAA; /*Cyan*/
+
+	--default: #FFFFFF; /*White*/
+
+	--font-default: #717580; /*Blueish-Gray*/
+
+	--font-light: #e6e6eb; /*Blueish-Gray-White*/
+	--font-light-focused: #FFFFFF;
+}
+
+
+
