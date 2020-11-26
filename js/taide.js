@@ -19,7 +19,7 @@ const kuvataulukko = [
     'tiedostonimi': 'img/Havunneulaset.jpg',
   },
   {
-    'tiedostonimi': 'img/Havunneulaset.jpg',
+    'tiedostonimi': 'img/Sammal2.jpg',
   },
 ];
 
