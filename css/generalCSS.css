@@ -101,14 +101,6 @@ article p {
 }
 
 
-/* "Images" */
-.image {
-	width: 100%;
-	margin-bottom: -4px;
-	border-radius: 5px 5px 0 0;
-
-}
-
 /*Button in end of each article*/
 .button {
 	display: block;
@@ -176,6 +168,11 @@ article p {
 	--font-light: #e6e6eb; /*Blueish-Gray-White*/
 	--font-light-focused: #FFFFFF;
 }
+img {
+	width: 1000px;
+	height: auto;
+}
+
 
 
 
