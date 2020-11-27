@@ -108,10 +108,9 @@ article p {
 	border-radius: 5px;
 	background-color: var(--secondary);
 	color: var(--font-light);
-	width: 3rem;
+	width: 4rem;
 	padding: .6rem 1.3rem;
-	margin: 0;
-	text-decoration: none;
+	margin: auto;
 	font-family: inherit;
 
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -122,6 +121,14 @@ article p {
 	color: var(--font-light-focused);
 	background-color: var(--secondary-light);
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/*Image*/
+.image {
+	width: 600px;
+	height: auto;
+	margin: auto;
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -169,10 +176,7 @@ article p {
 	--font-light: #e6e6eb; /*Blueish-Gray-White*/
 	--font-light-focused: #FFFFFF;
 }
-img {
-	width: 1000px;
-	height: auto;
-}
+
 
 
 

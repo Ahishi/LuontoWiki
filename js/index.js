@@ -27,7 +27,7 @@ if (maini != null) {
 }else {
   console.log("Jotain meni pieleen.")
 }
-
+//Käydään taulukko läpi ja lisätään taulukon tiedot html koodiin.
 for (let i = 0; i < kuvataulukko.length; i++) {
   maini.innerHTML +=
       `
@@ -35,7 +35,7 @@ for (let i = 0; i < kuvataulukko.length; i++) {
     <h2>${kuvataulukko[i].otsikko}</h2>
     <p>Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed. </p>
     <p><a class="button" href="">Lisätietoja</a></p>
-    <img src=${kuvataulukko[i].tiedostonimi} alt="kuva">
+    <img class="image" src=${kuvataulukko[i].tiedostonimi} alt="kuva">
   </article>
        `;
 }
