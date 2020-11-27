@@ -41,8 +41,9 @@ if (maini != null) {
 for (let i = 0; i < kuvataulukko.length; i++) {
   maini.innerHTML +=
       `
+      <article>
       <img src = ${kuvataulukko[i].tiedostonimi} alt = "kuva" >
-      
+      </article>
       `;
 }
 

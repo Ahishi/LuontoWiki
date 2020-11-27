@@ -13,7 +13,7 @@ html {
 	color: var(--font-default);
 	border-style: none;
 	padding-bottom: 1.5rem;
-	max-width: 70%;
+	max-width: 90%;
 	margin: 0 auto;
 	border-radius: 5px;
 
@@ -59,6 +59,7 @@ header h1 {
 	display: block;
 	width: auto;
 	height: fit-content;
+	margin: auto;
 }
 
 /*Link in menu item*/
@@ -82,7 +83,7 @@ article {
 	margin: 3rem 3rem 0 3rem;
 	overflow: hidden;
 	border-radius: 5px;
-	max-width: 1000px;
+
 }
 
 /*article title*/
