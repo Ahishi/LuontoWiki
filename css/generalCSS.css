@@ -41,40 +41,6 @@ header h1 {
 	text-align: center;
 }
 
-/*--------- MAIN MENU ---------------------*/
-
-/*Navbar*/
-#navbar {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-wrap: wrap;
-	background: var(--secondary);
-	box-shadow: 0 4px 3px -2px rgba(0,0,0,.2);
-}
-
-/*Menu item*/
-#navbar li {
-	display: block;
-	width: auto;
-	height: fit-content;
-	margin: auto;
-}
-
-/*Link in menu item*/
-#navbar a {
-	color: var(--font-light);
-	display: block;
-	padding: 1.5rem 1.5rem;
-	text-decoration: none;
-}
-
-/*Menu item when mouse over*/
-#navbar a:hover {
-	color: var(--font-light-focused);
-}
-
 /*--------- ARTICLES ---------------------*/
 
 /*Frame of each "article"*/
@@ -133,10 +99,6 @@ article p {
 }
 
 @media only screen and (max-width: 700px) {
-	#navbar {
-		justify-content: space-between;
-		padding: 0 .5rem;
-	}
 
 	#navbar a {
 		padding: 1rem;
@@ -153,29 +115,6 @@ article p {
 
 @media only screen and (max-width: 450px) {
 
-	#navbar {
-		height: 51px;
-	}
-
-	#navbar a {
-		display: none;
-	}
-
-}
-
-:root {
-	--secondary-light: #07ba7e;
-	--secondary: #009263; /*Blue-Green*/
-	--secondary-dark: #097351;
-
-	--primary: #00CCAA; /*Cyan*/
-
-	--default: #FFFFFF; /*White*/
-
-	--font-default: #717580; /*Blueish-Gray*/
-
-	--font-light: #e6e6eb; /*Blueish-Gray-White*/
-	--font-light-focused: #FFFFFF;
 }
 
 
