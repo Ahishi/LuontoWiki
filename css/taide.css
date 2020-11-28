@@ -128,6 +128,7 @@ article p {
 
 /*Image*/
 .image {
+    display: block;
     width: 600px;
     height: auto;
     margin-left: auto;
