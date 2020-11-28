@@ -21,7 +21,7 @@ const kuvataulukko = [
 
 //Etsitään sivulta main elementti.
 const maini = document.querySelector('main');
-
+//Ilmoitetaan, löytyykö elementtiä.
 if (maini != null) {
   console.log("Elementti löytyi!");
 }else {
