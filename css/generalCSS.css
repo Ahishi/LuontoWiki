@@ -4,17 +4,20 @@
 html {
 	background: var(--primary);
 	background: linear-gradient(144deg, rgba(0,204,170,1) 0%, rgba(7,186,126,1) 94%);
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
 }
 
 /*Background of all the app view */
 #container {
 	background: var(--default);
-	font-family: 'Roboto', sans-serif;
 	color: var(--font-default);
 	border-style: none;
-	padding-bottom: 1.5rem;
 	max-width: 90%;
-	margin: 0 auto;
 	border-radius: 5px;
 
 	box-shadow:
@@ -41,75 +44,18 @@ header h1 {
 	text-align: center;
 }
 
-/*--------- ARTICLES ---------------------*/
-
-/*Frame of each "article"*/
-article {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.2);
-	margin: 3rem 3rem 0 3rem;
-	overflow: hidden;
-	border-radius: 5px;
-
-}
-
-/*article title*/
-article h2 {
-	margin: 1.5rem;
-	font-size: 1.2rem;
-	font-family: inherit;
-	text-align: center;
-}
-
-/*article text*/
-article p {
-	margin: 1.5rem;
-	font-family: inherit;
-	line-height: 1.35;
-}
-
-
-/*Button in end of each article*/
-.button {
-	display: block;
-	border-radius: 5px;
-	background-color: var(--secondary);
-	color: var(--font-light);
-	width: 4rem;
-	padding: .6rem 1.3rem;
-	margin: auto;
-	font-family: inherit;
-
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-/*Button when mouse over*/
-.button:hover {
-	color: var(--font-light-focused);
-	background-color: var(--secondary-light);
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-/*Image*/
-.image {
-	display: block;
-	width: 600px;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-@media only screen and (max-width: 700px) {
-
-	#navbar a {
-		padding: 1rem;
+@media only screen and (max-width: 650px) {
+	header h1 {
+		border-radius: 0;
 	}
 
 	#container {
-		max-width: none;
+		max-width: 100%;
+		border-radius: 0;
 	}
 
-	article {
-		margin: 1.5rem 1.5rem 0 1.5rem;
+	body {
+		margin: 0;
 	}
 }
 

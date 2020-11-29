@@ -21,12 +21,14 @@ const kuvataulukko = [
 
 //Etsitään sivulta main elementti.
 const maini = document.querySelector('main');
+
 //Ilmoitetaan, löytyykö elementtiä.
 if (maini != null) {
   console.log("Elementti löytyi!");
-}else {
-  console.log("Jotain meni pieleen.")
+} else {
+  console.error("Jotain meni pieleen.");
 }
+
 //Käydään taulukko läpi ja lisätään taulukon tiedot html koodiin.
 for (let i = 0; i < kuvataulukko.length; i++) {
   maini.innerHTML +=
@@ -34,9 +36,10 @@ for (let i = 0; i < kuvataulukko.length; i++) {
   <article>
     <h2>${kuvataulukko[i].otsikko}</h2>
     <p>Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed. </p>
-    <p><a class="button" href="">Lisätietoja</a></p>
+    <a class="button" href="">Lisätietoja</a>
     <img class="image" src=${kuvataulukko[i].tiedostonimi} alt="kuva">
   </article>
+  <hr class="mobile-divide">
        `;
 }
 
