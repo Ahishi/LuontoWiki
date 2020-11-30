@@ -34,10 +34,26 @@ for (let i = 0; i < kuvataulukko.length; i++) {
   maini.innerHTML +=
       `
   <article>
-    <h2>${kuvataulukko[i].otsikko}</h2>
-    <p>Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed. </p>
-    <a class="button" href="">Lisätietoja</a>
-    <img class="image" src=${kuvataulukko[i].tiedostonimi} alt="kuva">
+    <figcaption>
+       <h2>${kuvataulukko[i].otsikko}</h2>
+       <div>
+            <p>
+                Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed. 
+                Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed.
+                Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed.
+                Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed.
+            </p>
+            <br>
+            <p>
+                Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed. 
+                Donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae semper quis lectus nulla. Imperdiet proin fermentum leo. Enim facilisis gravida neque convallis. Quis viverra nibh cras pulvinar mattis nunc sed.
+            </p>
+       </div>
+       <a class="button" href="">Lisätietoja</a>
+    </figcaption>
+    <figure>
+        <img class="image" src=${kuvataulukko[i].tiedostonimi} alt="kuva">
+    </figure>
   </article>
   <hr class="mobile-divide">
        `;

@@ -169,3 +169,18 @@ function listRenderer(ul){
         ul.appendChild(li);
     })
 }
+
+/*
+window.onscroll = function() {Stick()};
+
+let sticky = navbar.offsetTop;
+
+
+function Stick() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+*/

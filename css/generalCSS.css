@@ -17,7 +17,7 @@ body {
 	background: var(--default);
 	color: var(--font-default);
 	border-style: none;
-	max-width: 90%;
+	width: 88%;
 	border-radius: 5px;
 
 	box-shadow:
@@ -44,13 +44,13 @@ header h1 {
 	text-align: center;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
 	header h1 {
 		border-radius: 0;
 	}
 
 	#container {
-		max-width: 100%;
+		width: 100%;
 		border-radius: 0;
 	}
 
