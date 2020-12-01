@@ -21,7 +21,101 @@
         </header>
 
         <nav></nav>
+        <div class="row">
+            <div class="column">
+                <img src="img/Havunneulaset.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="img/Jäkälä.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="img/Meri.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="img/Sammal2.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="img/Ruska.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+            </div>
 
+
+            <div class="column">
+                <img src="img/Keltavahvero.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+            </div>
+
+            <div class="column">
+                <img src="img/Mustikka.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+
+                    <img src="img/Havunneulaset.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+
+                    <img src="img/Jäkälä.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+
+                    <img src="img/Meri.jpg" style="width:100%">
+                </div>
+
+
+                <div class="mySlides">
+
+                    <img src="img/Sammal2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+
+                    <img src="img/Ruska.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+
+                    <img src="img/Keltavahvero.jpg" style="width:100%">
+                </div>
+
+
+                <div class="mySlides">
+
+                    <img src="img/Mustikka.jpg" style="width:100%">
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="column">
+                    <img class="demo" src="img/Havunneulaset.jpg" onclick="currentSlide(1)" alt="Lights">
+                </div>
+                <div class="column">
+                    <img class="demo" src="img/Jäkälä.jpg" onclick="currentSlide(2)" alt="Lights">
+                </div>
+                <div class="column">
+                    <img class="demo" src="img/Meri.jpg" onclick="currentSlide(3)" alt="Snow">
+                </div>
+                <div class="column">
+                    <img class="demo" src="img/Sammal2.jpg" onclick="currentSlide(2)" alt="Lights">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="img/Ruska.jpg" onclick="currentSlide(5)" alt="Mountains">
+                </div>
+                
+                <div class="column">
+                    <img class="demo" src="img/Keltavahvero.jpg" onclick="currentSlide(6)" alt="Lights">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="img/Mustikka.jpg" onclick="currentSlide(7)" alt="Nature">
+                </div>
+            </div>
+        </div>
         <main>
 
         </main>
