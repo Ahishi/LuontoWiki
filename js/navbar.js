@@ -170,7 +170,6 @@ function listRenderer(ul){
     })
 }
 
-/*
 window.onscroll = function() {Stick()};
 
 let sticky = navbar.offsetTop;
@@ -183,4 +182,3 @@ function Stick() {
         navbar.classList.remove("sticky");
     }
 }
-*/

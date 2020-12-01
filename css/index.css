@@ -72,13 +72,14 @@ figcaption .button {
 figure {
     display: block;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     height: auto;
     border-radius: 5px;
 
+    position: relative;
     object-fit: contain;
 
-    margin: 2rem 0 0 0;
+    margin: 0 0 2rem 0;
 }
 
 /*Images*/
@@ -87,7 +88,57 @@ figure {
     height: 100%;
 }
 
+.pointer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    cursor: pointer;
 
+    border-radius: 40px;
+    border-style: solid;
+    border-width: 4px;
+    color: #242323;
+    /*border-color: white;*/
+    border-color: #242323;
+
+    opacity: 75%;
+
+    background-color: white;
+    height: 35px;
+    width: 35px;
+}
+
+.pointer:hover {
+    font-weight: bold;
+    opacity: 90%;
+    color: black;
+    border-color: black;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: fit-content;
+    background-color: black;
+    color: var(--font-light);
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    font-size: 1rem;
+
+    left: 130%;
+    bottom: 0;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 
 @media only screen and (max-width: 700px) {
     article {
