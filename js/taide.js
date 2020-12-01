@@ -39,12 +39,24 @@ if (maini != null) {
 }
 //Käydään taulukko läpi ja viedään kuvat taulukosta sivulle.
 for (let i = 0; i < kuvataulukko.length; i++) {
-  maini.innerHTML +=
-      `
+  //Jos otsikko ei ole Keltavahvero tai Mustikka lisätään sivulle kuvat ja elementit sivulle normaalisti.
+  if (kuvataulukko[i].otsikko !== 'Keltavahvero' && kuvataulukko[i].otsikko !== 'Mustikka') {
+    maini.innerHTML +=
+        `
       <article>
       <img class="image" src = ${kuvataulukko[i].tiedostonimi} alt = "kuva" >
       </article>
       `;
+    /*Jos kuvien otsikkona on Mustikka tai Keltavahvero, Lisätään muuten elementit normaalisti sivulle, mutta laitetaan
+    kuvat "rotate" luokkaan, jotta kuvat kääntyvät 90 astetta.*/
+  } else {
+    maini.innerHTML +=
+        `
+      <article>
+      <img class="rotate" src = ${kuvataulukko[i].tiedostonimi} alt = "kuva" >
+      </article>
+      `;
+  }
 }
 
 

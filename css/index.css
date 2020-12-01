@@ -87,6 +87,8 @@ figure {
     height: 100%;
 }
 
+
+
 @media only screen and (max-width: 700px) {
     article {
         margin: 1rem 1rem 0 1rem;
