@@ -1,33 +1,38 @@
 //Etsitään sivulta main elementti.
-const maini = document.querySelector('main');
+const main = document.querySelector('main');
 
 //Ilmoitetaan, löytyykö elementtiä.
-if (maini != null) {
-  console.log("Elementti löytyi!");
+if (main != null) {
+    console.log("Elementti löytyi!");
 } else {
-  console.error("Jotain meni pieleen.");
+    console.error("Jotain meni pieleen.");
 }
 
 //Käydään taulukko läpi ja lisätään taulukon tiedot html koodiin.
-kuvataulukko.forEach(article => {
+for(let i = 0; i < kuvataulukko.length; i++) {
+    const article = kuvataulukko[i];
 
-  let buttonList = "";
-  if(article.buttons){
-    article.buttons.forEach(button => {
-      buttonList += `
-        <button class="pointer tooltip" style="left: ${button.pos.width}; bottom: ${button.pos.height};" >
-        ?
-        <span class="tooltiptext">${button.tooltip}</span>
-        </button>
-      `
-    })
-  }
+    let buttonList = "";
+    if (article.buttons) {
+        for(let x = 0; x < article.buttons.length; x++) {
+            let button = article.buttons[x];
+            buttonList +=
+                `
+            <button class="pointer" style="left: ${button.pos.width}; bottom: ${button.pos.height};" >
+            ?
+            <span class="tooltiptext">${button.tooltip}</span>
+            </button>
+            `
+        }
+    }
 
-  maini.innerHTML +=
-      `
+    let image = createImage(article.tiedostonimi, article.otsikko).outerHTML;
+
+    main.innerHTML +=
+        `
   <article>
     <figure>
-        ${luoKuva(article.tiedostonimi, article.otsikko)}
+        ${image}
         ${buttonList}
     </figure>
     
@@ -41,7 +46,7 @@ kuvataulukko.forEach(article => {
   </article>
   <hr class="mobile-divide">
        `;
-})
+}
 
 
 

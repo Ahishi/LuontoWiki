@@ -1,3 +1,9 @@
-function luoKuva(src, title){
-    return `<img class="image" src="${src}" alt="${title} -kuva">`;
+function createImage(src, title) {
+    let image = new Image();
+
+    image.src = src;
+    image.className = "image";
+    image.alt = title + " -kuva";
+
+    return image;
 }

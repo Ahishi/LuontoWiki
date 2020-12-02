@@ -1,127 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <title>Taide</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/generalCSS.css">
-    <link rel="stylesheet" href="css/taide.css">
-    <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="css/colors.css">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="css/generalCSS.css" rel="stylesheet" type="text/css">
+    <link href="css/taide.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
+    <link href="css/colors.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/kuvataulukko.js"></script>
-    <script type="text/javascript" src="js/kuvaluoja.js"></script>
+    <script src="js/kuvataulukko.js" type="text/javascript"></script>
+    <script src="js/kuvaluoja.js" type="text/javascript"></script>
 </head>
 <body>
-    <div id="container">
 
-        <header>
-            <h1>Luonto.wiki</h1>
-        </header>
+<header>
+    <h1>Luonto.wiki</h1>
+</header>
 
-        <nav></nav>
-        <div class="row">
-            <div class="column">
-                <img src="img/Havunneulaset.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="img/Jäkälä.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="img/Meri.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="img/Sammal2.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="img/Ruska.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
-            </div>
+<nav></nav>
 
+<main>
+    <article>
 
-            <div class="column">
-                <img src="img/Keltavahvero.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
-            </div>
+    </article>
+</main>
 
-            <div class="column">
-                <img src="img/Mustikka.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
-            </div>
-        </div>
+<footer>
 
-        <!-- The Modal/Lightbox -->
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
+</footer>
 
-                <div class="mySlides">
+<div class="modal" id="myModal">
+    <span class="close">&times;</span>
+    <div class="control next">
 
-                    <img src="img/Havunneulaset.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-
-                    <img src="img/Jäkälä.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-
-                    <img src="img/Meri.jpg" style="width:100%">
-                </div>
-
-
-                <div class="mySlides">
-
-                    <img src="img/Sammal2.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-
-                    <img src="img/Ruska.jpg" style="width:100%">
-                </div>
-                <div class="mySlides">
-
-                    <img src="img/Keltavahvero.jpg" style="width:100%">
-                </div>
-
-
-                <div class="mySlides">
-
-                    <img src="img/Mustikka.jpg" style="width:100%">
-                </div>
-
-                <!-- Thumbnail image controls -->
-                <div class="column">
-                    <img class="demo" src="img/Havunneulaset.jpg" onclick="currentSlide(1)" alt="Lights">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/Jäkälä.jpg" onclick="currentSlide(2)" alt="Lights">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/Meri.jpg" onclick="currentSlide(3)" alt="Snow">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/Sammal2.jpg" onclick="currentSlide(2)" alt="Lights">
-                </div>
-
-                <div class="column">
-                    <img class="demo" src="img/Ruska.jpg" onclick="currentSlide(5)" alt="Mountains">
-                </div>
-                
-                <div class="column">
-                    <img class="demo" src="img/Keltavahvero.jpg" onclick="currentSlide(6)" alt="Lights">
-                </div>
-
-                <div class="column">
-                    <img class="demo" src="img/Mustikka.jpg" onclick="currentSlide(7)" alt="Nature">
-                </div>
-            </div>
-        </div>
-        <main>
-
-        </main>
     </div>
+    <article class="modal-content">
 
-    <script src="js/taide.js"></script>
-    <script type="text/javascript" src="js/navbar.js"></script>
+    </article>
+    <p class="number-text"></p>
+    <div class="control prev">
+
+    </div>
+</div>
+
+<script src="js/taide.js"></script>
+<script src="js/navbar.js" type="text/javascript"></script>
 </body>
 </html>

@@ -50,6 +50,7 @@ const kuvataulukko = [
     {
         'otsikko': 'Meri',
         'tiedostonimi': 'img/Meri.jpg',
+        'rotate' : false,
         'content' :
             `
         <p>
@@ -66,16 +67,16 @@ const kuvataulukko = [
                 'id' : 1,
                 'tooltip' : "Mustikka",
                 'pos' : {
-                    'width' : "34%",
-                    'height' : "41%",
+                    'width' : "33%",
+                    'height' : "42%",
                 },
             },
             {
                 'id' : 2,
                 'tooltip' : "Puolukka",
                 'pos' : {
-                    'width' : "17%",
-                    'height' : "80%"
+                    'width' : "21%",
+                    'height' : "11%"
                 }
             },
         ],

@@ -7,15 +7,8 @@ html {
 
 body {
 	margin: 0;
-}
-
-/*Background of all the app view */
-#container {
 	background: var(--default);
 	color: var(--font-default);
-	border-style: none;
-	border-radius: 5px;
-
 }
 
 /*--------- HEADER ---------------------*/
@@ -29,11 +22,6 @@ header h1 {
 	font-size: 1.5rem;
 	font-family: inherit;
 	text-align: center;
-}
-
-/*Rotate Image*/
-.rotate {
-	transform: rotate(90deg);
 }
 
 @media only screen and (max-width: 700px) {

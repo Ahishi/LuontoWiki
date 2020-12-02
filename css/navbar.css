@@ -27,6 +27,10 @@
     color: var(--font-light-focused);
 }
 
+#navbar a:focus {
+    color: var(--font-light-focused);
+}
+
 /*--- - MOBIILI "DRAWER" - ---*/
 
 #mobile-nav {
@@ -34,6 +38,7 @@
     list-style-type: none;
     background-color: white;
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
