@@ -48,5 +48,13 @@ for(let i = 0; i < kuvataulukko.length; i++) {
        `;
 }
 
+//Asetetaan kuvien napeille kuuntelijat.
+const buttonList = document.querySelectorAll('button');
 
+for (let i = 0; i < buttonList.length; i++) {
+  buttonList[i].addEventListener(function() {
+
+
+  })
+}
 
