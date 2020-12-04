@@ -1,5 +1,6 @@
 const tietotaulukko = [
   {
+
     'suunnitelma': 'tietoa/Luonto.wiki_mainosvideo_ryhmä6.docx',
     'aanitys1': 'tietoa/Kohtaus1.mp3',
     'aanitys2': 'tietoa/Kohtaus2.mp3',
@@ -17,11 +18,12 @@ if (article != null) {
   console.log("Jotain meni pieleen.")
 }
 //Lisätäään sivulle otsikko.
-otsikko.innerText += "Mainosvideo"
+otsikko.innerText += 'Mainosvideo';
 //Käydään taulukko läpi ja sijoitetaan article elementin sisään taulukon tiedot.
 for (let i = 0; i < tietotaulukko.length; i++) {
   article.innerHTML +=
       `
+
       <iframe width="800" height="500" src="https://www.youtube.com/embed/Cw2F0whq9Oc" 
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <br>
