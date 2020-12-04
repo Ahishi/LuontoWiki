@@ -18,7 +18,7 @@ if (article != null) {
   console.log("Jotain meni pieleen.")
 }
 //Lisätäään sivulle otsikko.
-otsikko.innerText += "Mainosvideo"
+otsikko.innerText += "Mainosvideo";
 //Käydään taulukko läpi ja sijoitetaan article elementin sisään taulukon tiedot.
 for (let i = 0; i < tietotaulukko.length; i++) {
   article.innerHTML +=
@@ -41,6 +41,8 @@ for (let i = 0; i < tietotaulukko.length; i++) {
       <audio controls>
       <source src=${tietotaulukko[i].aanitys4} type="audio/mpeg">
       </audio>
+      <iframe id="video2" width="800" height="500" src="https://www.youtube.com/embed/n6f_r4n9Xk0" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
       `
 }
