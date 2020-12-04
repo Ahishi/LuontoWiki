@@ -1,5 +1,6 @@
 const tietotaulukko = [
   {
+
     'suunnitelma': 'tietoa/Luonto.wiki_mainosvideo_ryhmä6.docx',
     'aanitys1': 'tietoa/Kohtaus1.mp3',
     'aanitys2': 'tietoa/Kohtaus2.mp3',
