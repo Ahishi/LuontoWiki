@@ -21,13 +21,13 @@ const section = document.querySelector('section');
 /*Lisätään napille eventti, joka lukee minkä maakunnan käyttäjä on kirjoittanut hakukenttään ja sen mukaan, mitä käyttäjä
 on kirjoittanut lähetetään tieto oikealle funnktiolle.*/
 nappi.addEventListener('click', function() {
-  if (hakukentta.value === "Uusimaa") {
+  if (hakukentta.value === "Uusimaa" ||hakukentta.value === "uusimaa" || hakukentta.value === "UUSIMAA") {
     Uusimaa();
   }
-  else if(hakukentta.value === "Varsinais-Suomi") {
+  else if(hakukentta.value === "Varsinais-Suomi" || hakukentta.value === "varsinais-suomi" || hakukentta.value === "varsinais-Suomi" || hakukentta.value === "Varsinais Suomi" || hakukentta.value === "VARSINAIS SUOMI" || hakukentta.value === "varsinais suomi" || hakukentta.value === "varsinaissuomi" || hakukentta.value === "Varsinaissuomi" || hakukentta.value === "varsinaisSuomi") {
     VarsinaisSuomi();
   }
-  else if(hakukentta.value === "Kymenlaakso") {
+  else if(hakukentta.value === "Kymenlaakso" || hakukentta.value === "kymenlaakso" || hakukentta.value === "KYMENLAAKSO") {
     Kymenlaakso();
   }
   else{
