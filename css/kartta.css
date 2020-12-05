@@ -1,1 +1,8 @@
-#kartta { height: 450px; }
+#kartta {
+    height: 450px;
+    width: 1000px;
+}
+
+main {
+    padding: 15px;
+}
