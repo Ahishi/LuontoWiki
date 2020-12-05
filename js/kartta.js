@@ -15,7 +15,7 @@ const nappi = document.getElementById('nappi');
 const hakukentta = document.getElementById('hakuteksti');
 let markkeri;
 
-/*Lisätään napille eventti, joka lukee minkä kaupungin käyttäjä on kirjoittanut hakukenttään ja sen mukaan, mitä käyttäjä
+/*Lisätään napille eventti, joka lukee minkä maakunnan käyttäjä on kirjoittanut hakukenttään ja sen mukaan, mitä käyttäjä
 on kirjoittanut lähetetään tieto oikealle funnktiolle.*/
 nappi.addEventListener('click', function() {
   if (hakukentta.value === "Uusimaa") {
@@ -24,11 +24,11 @@ nappi.addEventListener('click', function() {
 })
 
 
-/*Tehdään kaikille pääkaupunkiseudun kaupungeille funktio, joiden kautta lisätään hakukentässä olevan kaupungin
+/*Tehdään kaikille maakunnille funktio, joiden kautta lisätään hakukentässä olevan kaupungin
 kaikkien kansallispuistojen sijainnit karttaan markkereiden avulla.*/
 function Uusimaa(){
-  markkeri = L.marker([59.87285355208106, 23.396464902953078], 8).addTo(kartta);
-  markkeri.bindPopup("<b>Tammisaaren saariston kansalispuisto</b>");
+  markkeri = L.marker([59.87285355208106, 23.396464902953078]).addTo(kartta);
+  markkeri.bindPopup("<b>Tammisaaren saariston kansallispuisto</b>").openPopup();
   return markkeri;
 
 }
