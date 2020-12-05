@@ -10,3 +10,31 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: 'pk.eyJ1Ijoia2FsbGV2byIsImEiOiJja2k4d2VlcmYwOXdjMnlvNXM3bDV4YjY2In0.ywr3bK8_LC89QuZxkzyOUg'
 }).addTo(kartta);
 
+//Muuttujat, joita käytetään haku toimintoon.
+const nappi = document.getElementById('nappi');
+const hakukentta = document.getElementById('hakuteksti');
+let markkeri;
+
+/*Lisätään napille eventti, joka lukee minkä kaupungin käyttäjä on kirjoittanut hakukenttään ja sen mukaan, mitä käyttäjä
+on kirjoittanut lähetetään tieto oikealle funnktiolle.*/
+nappi.addEventListener('click', function() {
+  if (hakukentta.value === "Helsinki") {
+    markkeri = L.marker
+  }
+})
+
+
+/*Tehdään kaikille pääkaupunkiseudun kaupungeille funktio, joiden kautta lisätään hakukentässä olevan kaupungin
+kaikkien kansallispuistojen sijainnit karttaan markkereiden avulla.*/
+function Helsinki(){
+
+}
+
+function Espoo() {
+
+}
+
+function Vantaa() {
+
+}
+
