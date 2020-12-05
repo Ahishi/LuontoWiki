@@ -1,6 +1,7 @@
 #kartta {
     height: 450px;
     width: 1000px;
+    margin-top: 10px;
 }
 
 main {
