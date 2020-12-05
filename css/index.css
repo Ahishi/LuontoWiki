@@ -91,6 +91,7 @@ figure {
     height: 100%;
 }
 
+/*Selector button*/
 .pointer {
     font-size: 1.2rem;
     font-weight: bold;
@@ -101,8 +102,8 @@ figure {
     border-style: solid;
     border-width: 4px;
     color: #242323;
-    /*border-color: white;*/
     border-color: #242323;
+    outline:none;
 
     opacity: 75%;
 
@@ -110,6 +111,28 @@ figure {
     height: 35px;
     width: 35px;
 }
+
+/* Wikiteksti muokkaajat */
+
+    figcaption h2{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .figcaption-content {
+        margin: 0;
+    }
+
+    .figcaption-content h2 {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: .8rem;
+    }
+
+    .figcaption-content p {
+        margin: 0 0 1rem 0;
+    }
+
 
 /* Tooltip text */
 .pointer .tooltiptext {
