@@ -63,25 +63,30 @@ img {
     object-fit: contain;
 }
 
-.slide{
+.slide {
 
 }
 
 /* Sulkemisnappi */
 .close {
-    color: var(--font-light);
     position: fixed;
-    z-index: 7;
-    top: 10px;
-    right: 40px;
+    z-index: 8;
+    top: 8px;
+    right: 30px;
     font-size: 35px;
     font-weight: bold;
     padding: .8rem;
 }
 
-.close:hover,
-.close:focus {
-    color: var(--font-light-focused);
+.close svg {
+    height: 25px;
+    width: 25px;
+    fill: var(--font-light);
+}
+
+.close:hover svg,
+.close:focus svg {
+    fill: var(--font-light-focused);
     text-decoration: none;
     cursor: pointer;
 }
@@ -90,13 +95,29 @@ img {
     display: block;
     opacity: 0;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
-    width: 15vw;
+    width: 15vh;
     background-color: gray;
-    z-index: 6;
+    z-index: 7;
     transition-duration: 0.1s;
+}
+
+.control-icon {
+    fill: var(--font-light);
+
+    height: 120px;
+    width: 45px;
+
+    display: block;
+    opacity: 100% !important;
+    margin: 0 2vw;
+    z-index: 6;
+    position: fixed;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .next {
@@ -114,6 +135,7 @@ img {
 .number-text {
     color: var(--font-light);
     font-size: 1rem;
+    margin-top: 1.5rem;
     padding: 8px 12px;
     position: absolute;
     top: 0;
@@ -122,22 +144,9 @@ img {
     border-radius: 5px;
 }
 
-/*
-.caption-container {
-    text-align: center;
-    background-color: transparent;
-    padding: 2px 16px;
-    color: white;
-}
-*/
-
 .figure:hover {
     transition: 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.no-overflow {
-    overflow: hidden;
 }
 
 @media only screen and (min-width: 1950px) {
@@ -159,8 +168,8 @@ img {
     }
 }
 
-@media only screen and (max-height: 450px){
-    .modal *{
+@media only screen and (max-height: 450px) {
+    .modal * {
         padding: 0;
     }
 }

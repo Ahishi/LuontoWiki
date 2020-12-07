@@ -11,6 +11,10 @@ body {
 	color: var(--font-default);
 }
 
+.no-overflow {
+	overflow: hidden;
+}
+
 /*--------- HEADER ---------------------*/
 
 /*Header text on top of the menu*/

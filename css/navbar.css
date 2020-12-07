@@ -8,6 +8,8 @@
     flex-wrap: wrap;
     background: var(--secondary);
     box-shadow: 0 4px 3px -2px rgba(0,0,0,.2);
+    height: 67px;
+    position: relative;
 }
 
 #navbar li {
@@ -19,7 +21,7 @@
 #navbar a {
     color: var(--font-light);
     display: block;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
     text-decoration: none;
 }
 
@@ -64,6 +66,31 @@
     text-decoration: none;
 }
 
+.mobile-nav-icon svg {
+    height: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--font-light);
+}
+
+.mobile-nav-icon svg:hover {
+    fill: var(--font-light-focused);
+}
+
+.mobile-nav-icon{
+    padding: .5rem !important;
+    height: fit-content;
+
+    cursor: pointer;
+
+    margin: 0 0 0 1rem;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 /*--- - PARAMETRIT - ---*/
 
 .hidden {
@@ -78,9 +105,17 @@
 
 .close-mobile-nav-icon {
     padding: 1.5rem !important;
-    position: absolute;
-    top: 5px;
+    position: fixed;
+    top: 2rem;
     right: 5px;
+}
+
+.close-mobile-nav-icon svg {
+    fill: var(--font-default) !important;
+}
+
+.close-mobile-nav-icon svg:hover {
+    fill: black !important;
 }
 
 @media only screen and (max-width: 700px) {
