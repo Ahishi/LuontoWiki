@@ -35,11 +35,11 @@ addEventListener("load", function() {
             <figure class="${article.tiedostonimi}">
                 ${buttonList}
             </figure>
-            
+            <figure>
             <figcaption id="${article.otsikko}-figcaption">
                 <p style="margin: 0">Klikkaa kuvassa olevaa kysymysmerkkiä saadaksesi tietoa.</p>
-               <!--<a class="button" href="">Lisätietoja</a>-->
             </figcaption>
+            </figure>
           </article>
           <hr class="mobile-divide">
            `;
