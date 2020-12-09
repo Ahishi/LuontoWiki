@@ -190,10 +190,20 @@ let sticky = navbar.offsetTop;
 
 //Funktio, joka tekee navbarin tahmeaksi.
 function Stick() {
+    const nav = navbar.getElementsByTagName("ul")[0];
     //Jos navbar ei näkyisi ikkunassa rullauksen jälkeen, navbar liitetään sivun yläreunaan. Muuten se palautetaan paikoilleen.
     if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+        if(!document.getElementById("nav-dummy")){
+            const dummy = document.createElement("span");
+            dummy.id = "nav-dummy";
+            navbar.appendChild(dummy);
+        }
+        nav.classList.add("sticky")
     } else {
-        navbar.classList.remove("sticky");
+        if(document.getElementById("nav-dummy")){
+            const dummy = document.getElementById("nav-dummy");
+            dummy.parentElement.removeChild(dummy);
+        }
+        nav.classList.remove("sticky");
     }
 }

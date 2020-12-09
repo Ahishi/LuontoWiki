@@ -7,13 +7,13 @@ article {
 }
 
 article h2 {
-    margin: 0 2rem 2rem 2rem;
+    margin: 0 3rem 3rem 3rem;
 }
 
 #kartta {
     display: inline-block;
     height: 60vh;
-    margin: 2rem 0;
+    margin: 3rem 0;
     width: 75%;
     border-radius: 5px;
     z-index: 1;
@@ -23,7 +23,6 @@ section {
     display: flex;
     justify-content: center;
     width: calc(100% - 2rem);
-    margin: 0 2rem;
 }
 
 input[type=text] {
