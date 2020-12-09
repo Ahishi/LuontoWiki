@@ -29,13 +29,10 @@ addEventListener("load", function() {
             wikipediaCaller(article.otsikko, true);
         }
 
-        const image = createImage(article.tiedostonimi, article.otsikko).outerHTML;
-
         main.innerHTML +=
             `
           <article>
-            <figure>
-                ${image}
+            <figure class="${article.tiedostonimi}">
                 ${buttonList}
             </figure>
             
@@ -48,6 +45,8 @@ addEventListener("load", function() {
            `;
     }
 
+    createImages();
+
     const buttonList = document.querySelectorAll('button'); //Haetaan kaikki kuvien napit.
 
     /*
@@ -56,6 +55,7 @@ addEventListener("load", function() {
      Sitten muilta saman kuvan napeilta poistetaan mahdollinen "active" luokka ja painetulle napille lisätään active luokka.
      Jos nappi, jota painetaan sisältää jo active luokan, se tarkoittaa, että kutsuttava artikkeli on jo olemassa, eikä mitään tarvitse tehdä.
     */
+
     for (let i = 0; i < buttonList.length; i++) {
         const button = buttonList[i];
         button.addEventListener("click", button => {

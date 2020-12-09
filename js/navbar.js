@@ -153,10 +153,12 @@ function createMobileNavbar() {
     mobileNavbar = document.querySelector("#mobile-nav");
     navButton = document.querySelectorAll(".mobile-nav-icon");
 
+    //Lisätään kuuntelija avausnapille.
     if (navButton[0]) {
         navButton[0].addEventListener("click", openNav);
     }
 
+    //Lisätään kuuntelija sulkemisnapille.
     if (navButton[1]) {
         navButton[1].addEventListener("click", closeNav);
     }
@@ -183,12 +185,14 @@ function listRenderer(ul){
     })
 }
 
+//Kun rullataan ikkunassa, käytetään stick funktiota.
 window.onscroll = function() {Stick()};
 
 let sticky = navbar.offsetTop;
 
-
+//Funktio, joka tekee navbarin tahmeaksi.
 function Stick() {
+    //Jos navbar ei näkyisi ikkunassa rullauksen jälkeen, navbar liitetään sivun yläreunaan. Muuten se palautetaan paikoilleen.
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
     } else {

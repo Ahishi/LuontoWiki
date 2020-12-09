@@ -12,35 +12,38 @@ for (let i = 0; i < kuvataulukko.length; i++) {
     const item = kuvataulukko[i];
 
     const figure = document.createElement("figure");
-    figure.className = "figure";
-    const image = createImage(item.tiedostonimi, item.otsikko);
-    image.id = i.toString();
-    figure.appendChild(image);
+    figure.className = "figure " + item.tiedostonimi;
     article.appendChild(figure);
 
     const newSlide = document.createElement("div");
     newSlide.className = "slide";
-    const slideImage = createImage(item.tiedostonimi, item.otsikko);
-    newSlide.appendChild(slideImage);
     modalContent.appendChild(newSlide);
 }
 
+createImages(); //Luodaan kuvat (kuvaluoja.js)
+
+//Sulkemisnappi on elementti, jolla on .close luokka ja lisätään kuuntelija, jota klikattaessa suljetaan lightbox.
 const closeButton = document.querySelector(".close");
 closeButton.addEventListener("click", function () {
     closeLightbox();
 })
 
+//Etsitään ja lisätään kuuntelija ohjaimelle, joka klikattaessa antaa seuraavan kuvan.
 const controls = document.querySelectorAll(".control");
 controls[0].addEventListener("click", function() {
     nextSlide();
 })
 
+//Etsitään ja lisätään kuuntelija ohjaimelle, joka klikattaessa antaa edellisen kuvan.
 controls[1].addEventListener("click", function() {
-    prevSlide()
+    prevSlide();
 })
 
+//Etsitään kaikki kuvakehykset.
 const imageList = document.querySelectorAll('figure');
-for (i = 0; i < imageList.length; i++) {
+
+//Jokaista kuvakehystä kohden, lisätään kuuntelija, jota klikattaessa avataan kuvan lightbox ja ilmoitetaan consoleen.
+for (let i = 0; i < imageList.length; i++) {
     const image = imageList[i];
     image.addEventListener("click", onClick => {
         console.log("klikattu => " + onClick.target.id)
@@ -49,19 +52,20 @@ for (i = 0; i < imageList.length; i++) {
     })
 }
 
-// Avaa lightbox
+// Avaa lightbox funktio
 function openLightbox() {
-    document.querySelector("#myModal").style.display = "flex";
+    document.querySelector("#lightbox").style.display = "flex";
 }
 
-// Sulje lightbox
+// Sulje lightbox funktio
 function closeLightbox() {
-    document.querySelector("#myModal").style.display = "none";
+    document.querySelector("#lightbox").style.display = "none";
     HTML.className = "";
 }
 
-let slideIndex = 0;
+let slideIndex = 0; //Sliden indeksi.
 
+//Funktio, joka näyttää annetun sliden.
 function showCurrentSlide(n){
     slideIndex = n;
     showSlide()
@@ -79,30 +83,33 @@ function prevSlide(){
     showSlide();
 }
 
+// Funktio, joka näyttää sliden
 function showSlide() {
-    let slides = document.querySelectorAll(".slide");
-    let numberText = document.querySelector(".number-text");
-    const indexLength = slides.length - 1;
-    console.log(slideIndex);
+    let slides = document.querySelectorAll(".slide"); //Tehdään lista kaikista slideista.
+    let numberText = document.querySelector(".number-text"); //Haetaan kuvan sijaintia ilmaiseva teksti.
+    const indexLength = slides.length - 1; //Sliden määrä indeksinä.
 
+    //Jos aikaisemmin annettu sliden indeksi on suurempi, kuin maksimi määrä. Palataan listan alkuun.
     if (slideIndex > indexLength) {
         slideIndex = 0;
-        console.log("yeet");
     }
 
+    //Jos halutun sliden indeksi on pienempi, kuin 0. Mennään listan loppuun.
     if (slideIndex < 0) {
         slideIndex = indexLength;
-        console.log("yeet");
     }
 
+    //Jokaista sliden elementtiä kohden, piilotetaan slide.
     for (let i = 0; i <= indexLength; i++) {
         slides[i].style.display = "none";
     }
 
+    //Jos sliden indeksi on 0 tai suurempi (hyväksyttävä arvo)
     if (slideIndex >= 0) {
-        slides[slideIndex].style.display = "block";
-        HTML.className = "no-overflow";
-        numberText.textContent = (parseInt(slideIndex)+1).toString() + "/" + (indexLength+1).toString();
+        createSlideImage(slideIndex, getSizeClass(window.innerWidth)); //Luodaan kuva slidelle. (kuvaluoja.js)
+        slides[slideIndex].style.display = "block"; //Näytetään slide
+        HTML.className = "no-overflow"; //Tehdään, että sivulla ei ole rullausmahdollisuutta, koska lightbox on kokoruudulla.
+        numberText.textContent = (parseInt(slideIndex)+1).toString() + "/" + (indexLength+1).toString(); //Pidetään huolta kuvan sijainnin listalla ilmoittamisesta.
     }
 }
 

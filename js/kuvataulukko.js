@@ -2,7 +2,7 @@
 const kuvataulukko = [
     {
         'otsikko': 'Jäkälä',
-        'tiedostonimi': 'img/Jäkälä.jpg',
+        'tiedostonimi': 'Jäkälä.jpg',
         'buttons' : [
             {
                 'id' : "Harmaaporonjäkälä",
@@ -22,16 +22,16 @@ const kuvataulukko = [
     },
     {
         'otsikko': 'Keltavahvero',
-        'tiedostonimi': 'img/Keltavahvero.jpg',
+        'tiedostonimi': 'Keltavahvero.jpg',
     },
     {
         'otsikko': 'Meri',
-        'tiedostonimi': 'img/Meri.jpg',
+        'tiedostonimi': 'Meri.jpg',
         'rotate' : false,
     },
     {
         'otsikko': 'Mustikka',
-        'tiedostonimi': 'img/Mustikka.jpg',
+        'tiedostonimi': 'Mustikka.jpg',
         'buttons' : [
             {
                 'id' : "Mustikka",

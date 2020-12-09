@@ -1,10 +1,100 @@
-#kartta {
-    height: 450px;
-    width: 1000px;
-    margin-top: 10px;
+html {
+    overflow: hidden;
 }
 
-main {
-    padding: 15px;
+article {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+h2 {
+    margin: 0 2rem 2rem 2rem;
+}
+
+#kartta {
+    display: inline-block;
+    height: 55vh;
+    margin: 2rem 0;
+    width: 75%;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+input[type=text] {
+    height: 40px;
+    width: 300px;
+
+    font-size: .8rem;
+
+    box-sizing: border-box;
+
+    border-radius: 5px;
+    border-color: var(--font-default);
+    border-width: 1px;
+
+    padding: .5rem;
+}
+
+button {
+    font-size: .8rem;
+    padding: .5rem .5rem;
+
+    height: 40px;
+    width: 40px;
+
+    background-color: var(--default);
+
+    border-radius: 5px;
+    border-color: var(--font-default);
+    border-width: 1px;
+    margin-left: .5rem;
+}
+
+button:hover{
+    border-color: black;
+}
+
+.st0 {
+    stroke: var(--font-default) !important;
+}
+
+.st1 {
+    stroke: var(--font-default) !important;
+    fill: var(--font-default) !important;
+}
+
+button:hover .st0 {
+    stroke: black !important;
+}
+
+button:hover .st1 {
+    stroke: black !important;
+    fill: black !important;
+}
+
+@media only screen and (max-width: 450px) {
+    article {
+        margin: 1.5rem 0;
+    }
+
+    h2 {
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    #kartta {
+        margin: 1rem 0;
+        width: calc(100% - 2rem);
+        height: 45vh;
+    }
 }
 
