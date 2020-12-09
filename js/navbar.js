@@ -52,7 +52,7 @@ ja luodaan oikeanlainen-
 */
 
 function navbarRenderer() {
-    if (navbar.innerText) {
+    if (navbar.innerHTML) {
         if (isMobile() && !navbar.innerHTML.includes('mobile-nav')) {
             clearNav();
             createMobileNavbar();
@@ -166,9 +166,7 @@ function createMobileNavbar() {
 
 //Puhdistaa nav -elementin
 function clearNav(){
-    while (navbar.firstChild) {
-        navbar.removeChild(navbar.lastChild);
-    }
+    navbar.innerHTML = "";
 }
 
 //Luo listan osiot navItems taulukon mukaan.
