@@ -20,6 +20,15 @@ nappi.addEventListener('click', function() {
   etsinta(hakukentta.value);
 });
 
+//Jos painetaan enter-nappia, rekisteröidään se napin painalluksena.
+hakukentta.addEventListener('keypress', function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    nappi.click();
+  }
+});
+
+
 
     /*Lisätään napille eventti, joka lukee minkä maakunnan käyttäjä on kirjoittanut hakukenttään ja sen mukaan, mitä käyttäjä
     on kirjoittanut lähetetään tieto oikealle funnktiolle.*/
@@ -43,14 +52,21 @@ nappi.addEventListener('click', function() {
       Kymenlaakso();
     }
     else {
-
+      hakukentta.classList.add("redoutline");
       alert("Haulla ei löytynyt mitään.");
 
+        hakukentta.addEventListener('click', function() {
+          hakukentta.classList.remove("redoutline");
+        })
+
+        hakukentta.addEventListener('keypress', function(event){
+          hakukentta.classList.remove("redoutline");
+        })
     }
   }
 
 
-/*Tehdään kaikille maakunnille funktio, joiden kautta lisätään hakukentässä olevan kaupungin
+/*Tehdään kaikille maakunnille funktio, joiden kautta lisätään hakukentässä olevan maakunnan
 kaikkien kansallispuistojen sijainnit karttaan markkereiden avulla.*/
 function Uusimaa(){
 
@@ -127,6 +143,8 @@ function Kymenlaakso() {
     markkeri3.remove();
   })
 }
+
+
 
 
 

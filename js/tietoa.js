@@ -1,3 +1,4 @@
+//Taulukko, josta ääninauhoitukset otetaan.
 const audioFileArray = [
   {
     'rec': 'tietoa/Kohtaus1.mp3',
@@ -13,7 +14,7 @@ const audioFileArray = [
   }
 ];
 
-//tietoa/Luonto.wiki_mainosvideo_ryhmä6.docx
+
 
 //Etsitään figure elementti html-koodista.
 const audioContainer = document.querySelector('#audio');
