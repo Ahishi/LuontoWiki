@@ -57,6 +57,9 @@ hakukentta.addEventListener('keypress', function(event) {
 
 
       hakukentta.addEventListener('keypress', function(event){
+          if (event.keyCode === 13){
+            return false;
+          }
           hakukentta.classList.remove("redoutline");
         })
     }
