@@ -28,7 +28,7 @@ async function callWikipediaAPI(target) {
  Funktio, joka käsittelee API:sta saatua dataa.
  Annetusta datasta poistetaan kaikki muu paitsi otsikot ja informaatiota sisältävät kappaleet.
 */
-function parseResponse(wikiDump) {
+function parseResponse(wikiDump, search) {
     const wikiFragments = document.createRange().createContextualFragment(wikiDump);//Luodaan api vastauksesta html käsiteltävä versio wiki API:n dumpista.
     const allElements = wikiFragments.querySelectorAll(".mw-parser-output *"); //Luodaan Node-lista kaikista wikinodeista parser-output divin sisältä.
     let validElementArray = []; //Taulukko hyväksytyistä kappaleista.
@@ -59,6 +59,18 @@ function parseResponse(wikiDump) {
         }
 
     }
+
+    //Lisätään lähde kinkki.
+    const sourceText = document.createElement("p");
+    sourceText.className = "source";
+    sourceText.innerText = "Lähde: ";
+    const source = document.createElement("a");
+    const wikiSource = "https://fi.wikipedia.org/wiki/" + search;
+    source.href = wikiSource;
+    source.innerText = wikiSource;
+    sourceText.appendChild(source);
+
+    validElementArray.push(sourceText.outerHTML);
 
     return validElementArray.join(""); //Yhdistää ja palauttaa hyväksyttyjen kappaleiden taulukon.
 }

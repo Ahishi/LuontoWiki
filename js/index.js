@@ -35,11 +35,9 @@ addEventListener("load", function() {
             <figure class="${article.tiedostonimi}">
                 ${buttonList}
             </figure>
-            <figure>
             <figcaption id="${article.otsikko}-figcaption">
-                <p style="margin: 0">Klikkaa kuvassa olevaa kysymysmerkkiä saadaksesi tietoa.</p>
+                <p style="margin: 0; text-align: center"> Klikkaa kuvassa olevaa kysymysmerkkiä saadaksesi tietoa. </p>
             </figcaption>
-            </figure>
           </article>
           <hr class="mobile-divide">
            `;
@@ -78,7 +76,7 @@ addEventListener("load", function() {
 */
 function wikipediaCaller(search, autogen){
     callWikipediaAPI(search).then(response => {
-        loadArticle(search, parseResponse(response), autogen);
+        loadArticle(search, parseResponse(response, search), autogen);
     });
 }
 

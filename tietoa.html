@@ -14,9 +14,7 @@
 <body>
     <div id="container">
 
-        <header>
-            <h1>Luonto.wiki</h1>
-        </header>
+        <header></header>
 
         <nav></nav>
 
@@ -33,28 +31,36 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </figure>
             </article>
-            <article class="media-container">
+            <article class="media-container" id="link-container">
                 <a href="tietoa/Luonto.wiki_mainosvideo_ryhmä6.docx">Linkki mainosvideon suunnitelmaan</a>
+                <br>
                 <a href="tietoa/Synopsis.docx">Linkki toisen videon suunnitelmaan</a>
             </article>
-            <h2><br>Äänitteet</h2>
+
+            <hr>
+
+            <h2>Äänitteet</h2>
             <article id="audio-container">
                 <figure id="audio">
 
                 </figure>
             </article>
-            <br>
+
+            <hr>
 
             <h2>Tekijöiden kuvat</h2>
-            <article>
-                <figure id="picture" class="media-container">
-                    <img src="img/Kalle.jpg" alt="Kallen kuva">
+            <article id="pictures" class="media-container">
+                <figure>
+                    <img src="img/Kalle.jpg" alt="Kallen -kuva">
+                </figure>
+                <figure>
+                    <img src="img/Antti.jpg" alt="Antin -kuva">
                 </figure>
             </article>
         </main>
 
     </div>
-    <script src="js/tietoa.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/tietoa.js"></script>
 </body>
 </html>

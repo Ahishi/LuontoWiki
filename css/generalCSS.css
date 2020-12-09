@@ -16,21 +16,25 @@ body {
 }
 
 /*--------- HEADER ---------------------*/
+header {
+	background-color: var(--secondary-light);
+	background-image: url("../img/header.jpg");
+	background-size: 700px 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 
-/*Header text on top of the menu*/
-header h1 {
-	background-color: var(--secondary-dark);
-	color: var(--font-light);
-	margin: 0;
-	padding: 2rem 0;
-	font-size: 1.5rem;
-	font-family: inherit;
-	text-align: center;
+	height: 180px;
+
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: var(--secondary-dark);
 }
 
 @media only screen and (max-width: 700px) {
-	header h1 {
-		border-radius: 0;
+
+	header {
+		background-position: bottom;
+		background-size: 100% auto;
 	}
 
 	#container {
@@ -43,7 +47,9 @@ header h1 {
 }
 
 @media only screen and (max-width: 450px) {
-
+	header {
+		height: 100px;
+	}
 }
 
 
