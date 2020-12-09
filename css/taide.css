@@ -9,7 +9,7 @@ article {
 
 .figure {
     flex-basis: 32%;
-    height: fit-content;
+    height: max-content;
     max-width: 1600px;
     object-fit: contain;
     margin: 0 0 2vw 0;

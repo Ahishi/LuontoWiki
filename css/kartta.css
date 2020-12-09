@@ -22,8 +22,7 @@ article h2 {
 section {
     display: flex;
     justify-content: center;
-    position: relative;
-    width: 100%;
+    width: calc(100% - 2rem);
     margin: 0 2rem;
 }
 
@@ -44,8 +43,14 @@ input[type=text] {
 
 /*Punainen ääriviiva tekstilaatikolle*/
 .redoutline {
+    transition-duration: 95ms;
     border-color: #ff0029 !important;
-    border-width: 5px !important;
+    border-width: 2px !important;
+}
+
+.redoutline:focus {
+    transition-duration: 95ms;
+    outline-color: #ff0029 !important;
 }
 
 button {
@@ -68,15 +73,6 @@ button {
 button:hover{
     border-color: var(--font-light-focused);
 }
-
-/*button .st0 {
-    stroke: var(--font-light) !important;
-}
-
-button .st1 {
-    stroke: var(--font-light) !important;
-    fill: var(--font-light) !important;
-}*/
 
 button:hover .st0 {
     stroke: var(--font-light-focused) !important;

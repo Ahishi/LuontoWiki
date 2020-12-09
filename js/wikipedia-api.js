@@ -70,8 +70,12 @@ function parseResponse(wikiDump, search) {
     source.innerText = wikiSource;
     sourceText.appendChild(source);
 
+    //Leikataan osa pois, jos artikkeli on liian pitkä.
+    const cutLength = 16;
+    if(validElementArray.length > cutLength){
+        validElementArray.splice(cutLength, validElementArray.length - cutLength);
+    }
     validElementArray.push(sourceText.outerHTML);
-
     return validElementArray.join(""); //Yhdistää ja palauttaa hyväksyttyjen kappaleiden taulukon.
 }
 
@@ -88,7 +92,7 @@ function titleEditor(element) {
     for (let i = 0; i < spanList.length; i++) {
         let spanID = spanList[i].id; //Span elementin id on tehdään helpompaan muotoon.
         //Jos span elementin id on "Lähteet", "Aiheesta_muualla" tai "Katso_myös" se poistetaan.
-        if (spanID === "Lähteet" || spanID === "Aiheesta_muualla" || spanID === "Katso_myös") {
+        if (spanID === "Lähteet" || spanID === "Aiheesta_muualla" || spanID === "Katso_myös" || spanID === "Kirjallisuutta") {
             element.removeChild(element.querySelector("#" + spanID));
         }
     }

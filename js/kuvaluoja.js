@@ -33,18 +33,22 @@ function getSizeClass(size){
 window.addEventListener("resize", onResize); //Jos ikkunan koko muuttuu, kutsutaan funktio onResize;
 
 function onResize(){
-    const previousSize = parseInt(document.getElementsByClassName(kuvataulukko[0].tiedostonimi)[0].id); //Haetaan 1. kuvakehyksen tallennettu koko, koska kaikki kuvakehykset ovat saman kokoisia.
-    const currentSize = sizeSourceList[getSizeClass(document.getElementsByClassName(kuvataulukko[0].tiedostonimi)[0].offsetWidth)].size; //Haetaan
+    try {
+        const previousSize = parseInt(document.getElementsByClassName(kuvataulukko[0].tiedostonimi)[0].id); //Haetaan 1. kuvakehyksen tallennettu koko, koska kaikki kuvakehykset ovat saman kokoisia.
+        const currentSize = sizeSourceList[getSizeClass(document.getElementsByClassName(kuvataulukko[0].tiedostonimi)[0].offsetWidth)].size; //Haetaan
 
-    /*
-     Jos Edellinen koko on pienempi, kuin nykyinen koko, ladataan isompi kuva. Kuvia ei kannata pienentää, jos ne on jo ladattu isompana.
-     Jos halutaan vaihtaa, että koko vaihdetaan aina vaihda !==.
-    */
-    if(currentSize > previousSize){
-        //Uudelleen luodaan kuvat oikean kokoisina.
-        for(let i = 0; i < kuvataulukko.length; i++){
-            createImage(i);
+        /*
+        Jos Edellinen koko on pienempi, kuin nykyinen koko, ladataan isompi kuva. Kuvia ei kannata pienentää, jos ne on jo ladattu isompana.
+        Jos halutaan vaihtaa, että koko vaihdetaan aina vaihda !==.
+        */
+        if(currentSize !== previousSize){
+            //Uudelleen luodaan kuvat oikean kokoisina.
+            for(let i = 0; i < kuvataulukko.length; i++){
+                createImage(i);
+            }
         }
+    } catch (error) {
+        console.warn("Ei löydetty nykyista tai edellistä kokoa tällä hetkellä... " + error)
     }
 
     //Jos löydetään active luokka, eli lightbox sisältää kuvan.
@@ -56,7 +60,7 @@ function onResize(){
          Jos Edellinen koko on pienempi, kuin nykyinen koko, ladataan isompi kuva. Kuvia ei kannata pienentää, jos ne on jo ladattu isompana.
          Jos halutaan vaihtaa, että koko vaihdetaan aina vaihda !==.
         */
-        if(previousWindowSize > currentWindowSize){
+        if(previousWindowSize !== currentWindowSize){
             const activeSlideIndex = function (){
                 //Etsitään auki olevan kuvan slide.
                 for(let i = 0; i < slides.length; i++){

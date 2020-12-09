@@ -25,9 +25,8 @@ const kuvataulukko = [
         'tiedostonimi': 'Keltavahvero.jpg',
     },
     {
-        'otsikko': 'Meri',
+        'otsikko': 'Itämeri',
         'tiedostonimi': 'Meri.jpg',
-        'rotate' : false,
     },
     {
         'otsikko': 'Mustikka',
