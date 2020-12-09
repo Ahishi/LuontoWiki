@@ -1,7 +1,3 @@
-html {
-    overflow: hidden;
-}
-
 article {
     width: 100%;
     display: inline-flex;
@@ -10,13 +6,13 @@ article {
     margin: 3rem 0;
 }
 
-h2 {
+article h2 {
     margin: 0 2rem 2rem 2rem;
 }
 
 #kartta {
     display: inline-block;
-    height: 55vh;
+    height: 60vh;
     margin: 2rem 0;
     width: 75%;
     border-radius: 5px;
@@ -28,6 +24,7 @@ section {
     justify-content: center;
     position: relative;
     width: 100%;
+    margin: 0 2rem;
 }
 
 input[type=text] {
@@ -52,34 +49,44 @@ button {
     height: 40px;
     width: 40px;
 
-    background-color: var(--default);
+    background-color: var(--secondary);
 
     border-radius: 5px;
-    border-color: var(--font-default);
+    border-color: var(--font-light);
     border-width: 1px;
     margin-left: .5rem;
+
+    cursor: pointer;
 }
 
 button:hover{
-    border-color: black;
+    border-color: var(--font-light-focused);
 }
 
-.st0 {
-    stroke: var(--font-default) !important;
+/*button .st0 {
+    stroke: var(--font-light) !important;
 }
 
-.st1 {
-    stroke: var(--font-default) !important;
-    fill: var(--font-default) !important;
-}
+button .st1 {
+    stroke: var(--font-light) !important;
+    fill: var(--font-light) !important;
+}*/
 
 button:hover .st0 {
-    stroke: black !important;
+    stroke: var(--font-light-focused) !important;
 }
 
 button:hover .st1 {
-    stroke: black !important;
-    fill: black !important;
+    stroke: var(--font-light-focused) !important;
+    fill: var(--font-light-focused) !important;
+}
+
+@media only screen and (max-width: 700px) {
+    #kartta {
+        margin: 2rem 0;
+        width: calc(100% - 4rem);
+        height: 45vh;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -87,7 +94,7 @@ button:hover .st1 {
         margin: 1.5rem 0;
     }
 
-    h2 {
+    article h2 {
         margin: 0 1rem 1rem 1rem;
     }
 

@@ -71,11 +71,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    fill: var(--font-light);
+    fill: var(--font-light) !important;
 }
 
 .mobile-nav-icon svg:hover {
-    fill: var(--font-light-focused);
+    fill: var(--font-light-focused) !important;
 }
 
 .mobile-nav-icon{

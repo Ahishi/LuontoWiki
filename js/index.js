@@ -37,7 +37,7 @@ addEventListener("load", function() {
             </figure>
             
             <figcaption id="${article.otsikko}-figcaption">
-                <p>Klikkaa kuvassa olevaa kysymysmerkkiä saadaksesi tietoa.</p>
+                <p style="margin: 0">Klikkaa kuvassa olevaa kysymysmerkkiä saadaksesi tietoa.</p>
                <!--<a class="button" href="">Lisätietoja</a>-->
             </figcaption>
           </article>
