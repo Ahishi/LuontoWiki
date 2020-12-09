@@ -55,11 +55,8 @@ hakukentta.addEventListener('keypress', function(event) {
       hakukentta.classList.add("redoutline");
       alert("Haulla ei löytynyt mitään.");
 
-        hakukentta.addEventListener('click', function() {
-          hakukentta.classList.remove("redoutline");
-        })
 
-        hakukentta.addEventListener('keypress', function(event){
+      hakukentta.addEventListener('keypress', function(event){
           hakukentta.classList.remove("redoutline");
         })
     }
